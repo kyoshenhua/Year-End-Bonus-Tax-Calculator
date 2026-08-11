@@ -10,34 +10,29 @@
       --primary-2:#1976D2;
       --primary-dark:#003B70;
       --primary-light:#EAF4FF;
-      --sky:#F3F8FF;
       --success:#0F9D58;
       --success-light:#EAF8F0;
       --warning:#F59E0B;
       --warning-light:#FFF7E8;
       --danger:#D93025;
       --danger-light:#FFF0EF;
-      --bg:#F3F7FC;
       --card:#FFFFFF;
       --line:#D8E3F0;
       --line-soft:#E8EEF7;
       --text:#1E293B;
       --muted:#64748B;
-      --muted-2:#94A3B8;
       --shadow:0 4px 12px rgba(0,91,172,.08),0 14px 34px rgba(15,23,42,.08);
       --shadow-soft:0 8px 22px rgba(15,23,42,.06);
       --radius-lg:24px;
       --radius:18px;
-      --radius-sm:12px;
     }
 
     *{box-sizing:border-box;}
-
     html{scroll-behavior:smooth;}
 
     body{
       margin:0;
-      padding:28px;
+      padding:24px;
       min-height:100vh;
       color:var(--text);
       font-family:"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
@@ -49,33 +44,28 @@
     }
 
     .container{
-      width:min(1380px,100%);
+      width:min(1080px,100%);
       margin:0 auto;
     }
 
     .hero{
       position:relative;
       overflow:hidden;
-      display:grid;
-      grid-template-columns:1.45fr .9fr;
-      gap:24px;
-      align-items:center;
-      padding:15px;
-      margin-bottom:24px;
+      padding:20px 22px;
+      margin-bottom:18px;
       border-radius:var(--radius-lg);
       color:#fff;
-      background:
-        linear-gradient(135deg, rgba(0,59,112,.98) 0%, rgba(0,91,172,.94) 48%, rgba(25,118,210,.94) 100%);
-      box-shadow:0 18px 46px rgba(0,91,172,.26);
+      background:linear-gradient(135deg,rgba(0,59,112,.98) 0%,rgba(0,91,172,.94) 50%,rgba(25,118,210,.94) 100%);
+      box-shadow:0 16px 36px rgba(0,91,172,.22);
     }
 
     .hero::before{
       content:"";
       position:absolute;
-      width:360px;
-      height:360px;
-      right:-110px;
-      top:-130px;
+      width:260px;
+      height:260px;
+      right:-100px;
+      top:-120px;
       border-radius:50%;
       background:rgba(255,255,255,.14);
     }
@@ -83,29 +73,32 @@
     .hero::after{
       content:"";
       position:absolute;
-      width:220px;
-      height:220px;
-      right:230px;
-      bottom:-150px;
+      width:160px;
+      height:160px;
+      right:140px;
+      bottom:-120px;
       border-radius:50%;
       background:rgba(255,255,255,.08);
     }
 
-    .hero-left,.hero-right{position:relative;z-index:1;}
+    .hero-left{
+      position:relative;
+      z-index:1;
+    }
 
     .hero-tag{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding:7px 12px;
-      margin-bottom:14px;
+      padding:6px 11px;
+      margin-bottom:10px;
       border:1px solid rgba(255,255,255,.28);
       border-radius:999px;
       background:rgba(255,255,255,.12);
       color:#EAF4FF;
-      font-size:13px;
+      font-size:12px;
       font-weight:700;
-      letter-spacing:.3px;
+      letter-spacing:.2px;
       backdrop-filter:blur(10px);
     }
 
@@ -119,50 +112,42 @@
     }
 
     .hero h1{
-      margin:0 0 10px;
-      font-size:24px;
-      line-height:1.16;
-      letter-spacing:-.6px;
+      margin:0 0 8px;
+      font-size:26px;
+      line-height:1.18;
+      letter-spacing:-.4px;
     }
 
     .hero p{
       margin:0;
-      max-width:760px;
-      color:rgba(255,255,255,.82);
-      font-size:15px;
+      max-width:720px;
+      color:rgba(255,255,255,.86);
+      font-size:14px;
     }
 
-    .hero-right{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
+    .hero-quick{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
     }
 
-    .hero-pill{
-      min-height:60px;
-      padding:15px;
-      border:1px solid rgba(255,255,255,.2);
-      border-radius:18px;
-      background:rgba(255,255,255,.12);
-      backdrop-filter:blur(12px);
-    }
-
-    .hero-pill .label{
-      color:rgba(255,255,255,.72);
+    .hero-quick span{
+      display:inline-flex;
+      align-items:center;
+      padding:5px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.18);
+      color:rgba(255,255,255,.88);
       font-size:12px;
       font-weight:700;
     }
 
-    .hero-pill .value{
-      margin-top:8px;
-      font-size:20px;
-      font-weight:800;
-    }
-
     .layout{
-      display:block;
-      grid-template-columns:430px 1fr;
-      gap:24px;
+      display:grid;
+      grid-template-columns:390px 1fr;
+      gap:22px;
       align-items:start;
     }
 
@@ -175,13 +160,13 @@
     }
 
     .input-card{
-      position:relative;
-      top:20px;
+      position:sticky;
+      top:18px;
       box-shadow:var(--shadow);
     }
 
     .card-header{
-      padding:17px 20px;
+      padding:16px 18px;
       border-bottom:1px solid var(--line-soft);
       background:linear-gradient(180deg,#FFFFFF 0%,#F7FBFF 100%);
     }
@@ -204,7 +189,7 @@
       font-size:12px;
     }
 
-    .card-body{padding:20px;}
+    .card-body{padding:18px;}
 
     .section-title{
       display:flex;
@@ -258,13 +243,13 @@
 
     input[type="number"]{
       width:100%;
-      height:44px;
+      height:46px;
       border:1px solid var(--line);
       border-radius:13px;
       padding:0 14px 0 32px;
       color:var(--text);
       background:#fff;
-      font-size:15px;
+      font-size:16px;
       outline:none;
       transition:.18s ease;
     }
@@ -365,7 +350,7 @@
       position:relative;
       overflow:hidden;
       margin-bottom:16px;
-      padding:24px;
+      padding:22px;
       border-radius:var(--radius-lg);
       color:#fff;
       background:linear-gradient(135deg,var(--primary-dark),var(--primary) 55%,var(--primary-2));
@@ -404,14 +389,14 @@
 
     .recommend-banner h3{
       margin:0 0 8px;
-      font-size:26px;
+      font-size:24px;
       line-height:1.18;
       letter-spacing:-.4px;
     }
 
     .recommend-banner p{
       margin:0;
-      color:rgba(255,255,255,.82);
+      color:rgba(255,255,255,.84);
       font-size:14px;
     }
 
@@ -425,7 +410,7 @@
     .metric{
       position:relative;
       overflow:hidden;
-      min-height:134px;
+      min-height:128px;
       padding:16px;
       border:1px solid var(--line-soft);
       border-radius:18px;
@@ -458,7 +443,7 @@
 
     .metric-value{
       color:#0F2342;
-      font-size:24px;
+      font-size:23px;
       font-weight:900;
       line-height:1.2;
       word-break:break-word;
@@ -478,7 +463,6 @@
     }
 
     .chart-card .card-body{padding:18px 20px 20px;}
-
     .bar-list{display:grid;gap:14px;}
 
     .bar-row{
@@ -529,7 +513,7 @@
       border-radius:50%;
       display:grid;
       place-items:center;
-      background:conic-gradient(var(--primary) 0deg, var(--primary) 120deg, #E8F1FA 120deg, #E8F1FA 360deg);
+      background:conic-gradient(var(--primary) 0deg,var(--primary) 120deg,#E8F1FA 120deg,#E8F1FA 360deg);
       box-shadow:inset 0 0 0 1px rgba(0,91,172,.08);
     }
 
@@ -573,7 +557,14 @@
       font-size:13px;
     }
 
-    .legend-left{display:flex;align-items:center;gap:8px;color:#334155;font-weight:800;}
+    .legend-left{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#334155;
+      font-weight:800;
+    }
+
     .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);}
     .dot.tax{background:var(--danger);}
     .dot.net{background:var(--success);}
@@ -581,64 +572,94 @@
 
     .matrix-card{margin-bottom:16px;}
 
-    .table-wrap{
-      overflow-x:auto;
-      border:1px solid var(--line-soft);
-      border-radius:16px;
+    .scheme-cards{
+      display:grid;
+      gap:14px;
+    }
+
+    .scheme-card{
+      position:relative;
+      overflow:hidden;
+      padding:17px;
+      border:1px solid #E5EEF8;
+      border-radius:18px;
       background:#fff;
+      box-shadow:0 6px 18px rgba(15,23,42,.06);
     }
 
-    table{
-      width:100%;
-      min-width:920px;
-      border-collapse:collapse;
+    .scheme-card.best{
+      border:2px solid rgba(15,157,88,.72);
+      background:linear-gradient(180deg,#FFFFFF 0%,#F4FCF7 100%);
     }
 
-    th,td{
-      padding:14px 15px;
-      border-bottom:1px solid var(--line-soft);
-      text-align:left;
-      vertical-align:top;
-      font-size:14px;
-    }
-
-    th{
-      position:sticky;
-      top:0;
-      z-index:1;
-      background:#F5F9FE;
-      color:#50657F;
+    .scheme-card.best::before{
+      content:"当前最优";
+      position:absolute;
+      top:12px;
+      right:12px;
+      padding:4px 9px;
+      border-radius:999px;
+      background:var(--success-light);
+      color:var(--success);
       font-size:12px;
       font-weight:900;
-      letter-spacing:.2px;
     }
 
-    tr:last-child td{border-bottom:none;}
-    tbody tr:hover{background:#FAFDFF;}
+    .scheme-title{
+      padding-right:78px;
+      margin-bottom:5px;
+      color:#17345A;
+      font-size:17px;
+      font-weight:900;
+      line-height:1.3;
+    }
 
-    .scheme-name strong{display:block;color:#152846;margin-bottom:4px;}
-    .scheme-name span{display:block;color:var(--muted);font-size:12px;}
+    .scheme-desc{
+      margin-bottom:14px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .scheme-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:9px 0;
+      border-top:1px solid #EEF3F8;
+    }
+
+    .scheme-label{
+      color:#64748B;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .scheme-value{
+      color:#0F2342;
+      font-size:15px;
+      font-weight:900;
+      font-variant-numeric:tabular-nums;
+      text-align:right;
+    }
+
+    .scheme-diff.good{color:var(--success);}
+    .scheme-diff.bad{color:var(--danger);}
+
+    .scheme-extra{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:13px;
+      background:#F8FBFF;
+      color:#5B6F87;
+      font-size:12px;
+      line-height:1.5;
+    }
 
     .mono{font-variant-numeric:tabular-nums;}
-    .num{font-weight:900;color:#10243F;}
     .good{color:var(--success);font-weight:900;}
     .bad{color:var(--danger);font-weight:900;}
     .warn{color:var(--warning);font-weight:900;}
-
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:5px;
-      padding:4px 9px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:900;
-      white-space:nowrap;
-    }
-
-    .tag.best{background:var(--success-light);color:var(--success);}
-    .tag.neutral{background:var(--primary-light);color:var(--primary);}
-    .tag.caution{background:var(--warning-light);color:#B45309;}
 
     .notes{
       display:grid;
@@ -682,8 +703,6 @@
     .formula-list li{margin:5px 0;}
 
     @media (max-width:1180px){
-      .hero{grid-template-columns:1fr;}
-      .hero-right{max-width:650px;}
       .layout{grid-template-columns:1fr;}
       .input-card{position:static;}
       .dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -691,43 +710,49 @@
     }
 
     @media (max-width:720px){
-      body{padding:16px;}
-      .hero{padding:26px 22px;}
-      .hero h1{font-size:27px;}
-      .hero-right{grid-template-columns:1fr;}
+      body{padding:14px;}
+      .container{width:100%;}
+      .hero{padding:16px 16px;margin-bottom:14px;border-radius:20px;}
+      .hero-tag{font-size:11px;margin-bottom:8px;}
+      .hero h1{font-size:22px;margin-bottom:6px;}
+      .hero p{font-size:13px;}
+      .hero-quick{gap:6px;margin-top:10px;}
+      .hero-quick span{font-size:11px;padding:4px 8px;}
+      .card-header{padding:15px 16px;}
+      .card-body{padding:16px;}
       .btns{grid-template-columns:1fr;}
+      button{height:46px;font-size:15px;}
+      .empty-state{min-height:260px;padding:24px;}
       .dashboard-grid{grid-template-columns:1fr;}
-      .notes{grid-template-columns:1fr;}
+      .metric{min-height:auto;}
+      .metric-value{font-size:22px;}
+      .recommend-banner{padding:18px;border-radius:20px;}
+      .recommend-banner h3{font-size:20px;}
+      .analysis-grid{grid-template-columns:1fr;}
       .bar-row{grid-template-columns:1fr;gap:6px;}
       .bar-value{text-align:left;}
       .donut-wrap{grid-template-columns:1fr;justify-items:center;}
+      .legend-item{align-items:flex-start;}
+      .notes{grid-template-columns:1fr;}
+      .scheme-card{padding:15px;}
+      .scheme-title{font-size:16px;padding-right:72px;}
+      .scheme-row{align-items:flex-start;}
+      .scheme-value{max-width:55%;font-size:14px;}
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <section class="hero">
       <div class="hero-left">
         <div class="hero-tag">Payroll Tax Simulator</div>
-        <h1>年终奖税务测算分析平台</h1>
-        <p>以蓝色系商业仪表盘方式呈现全年一次性奖金、综合所得与奖金合并发放方案的税负差异，帮助快速判断更优发放路径。</p>
-      </div>
-      <div class="hero-right">
-        <div class="hero-pill">
-          <div class="label">分析场景</div>
-          <div class="value">奖金发放方案</div>
-        </div>
-        <div class="hero-pill">
-          <div class="label">展示方式</div>
-          <div class="value">Dashboard</div>
-        </div>
-        <div class="hero-pill">
-          <div class="label">测算口径</div>
-          <div class="value">年度税负</div>
-        </div>
-        <div class="hero-pill">
-          <div class="label">适用对象</div>
-          <div class="value">员工自助</div>
+        <h1>年终奖税务测算</h1>
+        <p>快速比较不同奖金发放方式的税负差异，帮助选择更优发放方案。</p>
+        <div class="hero-quick">
+          <span>不合并发放</span>
+          <span>合并发放</span>
+          <span>综合所得</span>
         </div>
       </div>
     </section>
@@ -738,42 +763,71 @@
           <h2>输入参数</h2>
           <p>请按年度口径填写收入、奖金与扣除信息</p>
         </div>
+
         <div class="card-body">
           <div class="section-title">一、收入信息</div>
+
           <div class="field">
             <label for="annualSalary">全年工资收入 <span class="help" style="margin:0;">不含本次两笔奖金</span></label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="annualSalary" placeholder="例如 180000" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="annualSalary" placeholder="例如 180000" min="0" step="0.01" />
+            </div>
             <span class="help">通常填全年已发工资、津贴等工资薪金收入。</span>
           </div>
+
           <div class="field">
             <label for="yearEndBonus">年终奖金额</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="yearEndBonus" placeholder="例如 50000" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="yearEndBonus" placeholder="例如 50000" min="0" step="0.01" />
+            </div>
           </div>
+
           <div class="field">
             <label for="otherBonus">另一笔奖金金额</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="otherBonus" placeholder="例如 20000" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="otherBonus" placeholder="例如 20000" min="0" step="0.01" />
+            </div>
             <span class="help">如留任奖、签约奖、补发奖金等。</span>
           </div>
+
           <div class="field">
             <label for="otherComprehensiveIncome">其他综合所得收入</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="otherComprehensiveIncome" placeholder="例如 0" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="otherComprehensiveIncome" placeholder="例如 0" min="0" step="0.01" />
+            </div>
             <span class="help">没有可填 0。</span>
           </div>
 
           <div class="section-title" style="margin-top:20px;">二、年度扣除信息</div>
+
           <div class="field">
             <label for="socialHousing">全年专项扣除</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="socialHousing" placeholder="例如 30000" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="socialHousing" placeholder="例如 30000" min="0" step="0.01" />
+            </div>
             <span class="help">三险一金等全年合计。</span>
           </div>
+
           <div class="field">
             <label for="specialDeduction">全年专项附加扣除</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="specialDeduction" placeholder="例如 24000" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="specialDeduction" placeholder="例如 24000" min="0" step="0.01" />
+            </div>
             <span class="help">如子女教育、住房租金、赡养老人等全年合计。</span>
           </div>
+
           <div class="field">
             <label for="otherDeduction">其他允许扣除</label>
-            <div class="input-wrap"><span class="currency">¥</span><input type="number" id="otherDeduction" placeholder="例如 0" min="0" step="0.01" /></div>
+            <div class="input-wrap">
+              <span class="currency">¥</span>
+              <input type="number" inputmode="decimal" id="otherDeduction" placeholder="例如 0" min="0" step="0.01" />
+            </div>
             <span class="help">如依法确定的其他扣除、符合条件的捐赠等。</span>
           </div>
 
@@ -836,7 +890,9 @@
     }
 
     function findBracket(value, brackets){
-      for(const item of brackets){ if(value <= item.limit) return item; }
+      for(const item of brackets){
+        if(value <= item.limit) return item;
+      }
       return brackets[brackets.length - 1];
     }
 
@@ -855,10 +911,15 @@
     }
 
     function formatMoney(num){
-      return Number(num || 0).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
+      return Number(num || 0).toLocaleString('zh-CN',{
+        minimumFractionDigits:2,
+        maximumFractionDigits:2
+      });
     }
 
-    function formatPct(value){ return (value * 100).toFixed(0) + '%'; }
+    function formatPct(value){
+      return (value * 100).toFixed(0) + '%';
+    }
 
     function getBonusBracketInfo(bonus){
       const avg = bonus / 12;
@@ -869,7 +930,11 @@
     function getComprehensiveBracketInfo(totalGrossIncome,totalOtherDeductions){
       const taxable = Math.max(0,totalGrossIncome - 60000 - totalOtherDeductions);
       const bracket = findBracket(taxable,ANNUAL_COMPREHENSIVE_BRACKETS);
-      return {taxable,rate:taxable > 0 ? bracket.rate : 0,deduction:taxable > 0 ? bracket.deduction : 0};
+      return {
+        taxable,
+        rate:taxable > 0 ? bracket.rate : 0,
+        deduction:taxable > 0 ? bracket.deduction : 0
+      };
     }
 
     function getJumpWarning(bonusAmount){
@@ -903,7 +968,10 @@
     }
 
     function resetForm(){
-      ['annualSalary','yearEndBonus','otherBonus','otherComprehensiveIncome','socialHousing','specialDeduction','otherDeduction'].forEach(id => document.getElementById(id).value = '');
+      ['annualSalary','yearEndBonus','otherBonus','otherComprehensiveIncome','socialHousing','specialDeduction','otherDeduction'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+
       document.getElementById('showAllScenario').checked = true;
       document.getElementById('resultArea').innerHTML = `
         <div class="empty-state">
@@ -946,6 +1014,8 @@
               <p>请填写“年终奖金额”或“另一笔奖金金额”后再开始测算。</p>
             </div>
           </div>`;
+
+        document.getElementById('resultArea').scrollIntoView({behavior:'smooth',block:'start'});
         return;
       }
 
@@ -970,21 +1040,48 @@
       const schemeCAfterTaxBonus = totalBonus - schemeCIncrementalTax;
 
       const allSchemes = [
-        {key:'A',title:'方案A：不合并',short:'不合并发放',desc:'年终奖单独计税；另一笔奖金并入综合所得',incrementalTax:schemeAIncrementalTax,totalTax:schemeATotalTax,afterTaxBonus:schemeAAfterTaxBonus,extra:'年终奖税额 ¥' + formatMoney(schemeABonusTax) + '；另一笔奖金综合所得增税 ¥' + formatMoney(schemeACompTax - baseComprehensiveTax)},
-        {key:'B',title:'方案B：合并发放',short:'合并发放',desc:'年终奖 + 另一笔奖金合并后按全年一次性奖金测算',incrementalTax:schemeBIncrementalTax,totalTax:schemeBTotalTax,afterTaxBonus:schemeBAfterTaxBonus,extra:'合并后奖金税额 ¥' + formatMoney(schemeBBonusTax)},
-        {key:'C',title:'方案C：全部并入综合所得',short:'综合所得',desc:'两笔奖金均并入综合所得年度税负中测算',incrementalTax:schemeCIncrementalTax,totalTax:schemeCTotalTax,afterTaxBonus:schemeCAfterTaxBonus,extra:'两笔奖金带来的综合所得增税 ¥' + formatMoney(schemeCIncrementalTax)}
+        {
+          key:'A',
+          title:'方案A：不合并',
+          short:'不合并发放',
+          desc:'年终奖单独计税；另一笔奖金并入综合所得',
+          incrementalTax:schemeAIncrementalTax,
+          totalTax:schemeATotalTax,
+          afterTaxBonus:schemeAAfterTaxBonus,
+          extra:'年终奖税额 ¥' + formatMoney(schemeABonusTax) + '；另一笔奖金综合所得增税 ¥' + formatMoney(schemeACompTax - baseComprehensiveTax)
+        },
+        {
+          key:'B',
+          title:'方案B：合并发放',
+          short:'合并发放',
+          desc:'年终奖 + 另一笔奖金合并后按全年一次性奖金测算',
+          incrementalTax:schemeBIncrementalTax,
+          totalTax:schemeBTotalTax,
+          afterTaxBonus:schemeBAfterTaxBonus,
+          extra:'合并后奖金税额 ¥' + formatMoney(schemeBBonusTax)
+        },
+        {
+          key:'C',
+          title:'方案C：全部并入综合所得',
+          short:'综合所得',
+          desc:'两笔奖金均并入综合所得年度税负中测算',
+          incrementalTax:schemeCIncrementalTax,
+          totalTax:schemeCTotalTax,
+          afterTaxBonus:schemeCAfterTaxBonus,
+          extra:'两笔奖金带来的综合所得增税 ¥' + formatMoney(schemeCIncrementalTax)
+        }
       ];
 
       const visibleSchemes = showAllScenario ? allSchemes : allSchemes.slice(0,2);
       const bestScheme = visibleSchemes.reduce((prev,curr)=> curr.incrementalTax < prev.incrementalTax ? curr : prev);
       const bestTax = bestScheme.incrementalTax;
       const maxTax = Math.max(...visibleSchemes.map(s => s.incrementalTax), 1);
-      const maxAfterTax = Math.max(...visibleSchemes.map(s => s.afterTaxBonus), 1);
       const savingVsHighest = Math.max(...visibleSchemes.map(s => s.incrementalTax)) - bestTax;
 
       let summaryClass = 'recommend-banner';
       let summaryTitle = '';
       let summaryText = '';
+
       if(bestScheme.key === 'A'){
         summaryTitle = '建议优先考虑：不合并发放';
         summaryText = '按当前输入测算，“年终奖单独计税 + 另一笔奖金并入综合所得”对应税负更低。';
@@ -997,11 +1094,9 @@
         summaryText = '按当前输入测算，两笔奖金全部并入综合所得的年度税负最低。';
       }
 
-      const bonusInfoA = getBonusBracketInfo(yearEndBonus);
       const bonusInfoB = getBonusBracketInfo(totalBonus);
       const compInfoBase = getComprehensiveBracketInfo(annualSalary + otherComprehensiveIncome,deductionTotal);
       const compInfoA = getComprehensiveBracketInfo(annualSalary + otherBonus + otherComprehensiveIncome,deductionTotal);
-      const compInfoC = getComprehensiveBracketInfo(annualSalary + totalBonus + otherComprehensiveIncome,deductionTotal);
       const jumpWarning = getJumpWarning(totalBonus);
       const effectiveRate = totalBonus > 0 ? bestTax / totalBonus : 0;
       const donutDeg = Math.max(0, Math.min(360, effectiveRate * 360));
@@ -1017,21 +1112,38 @@
           </div>`;
       }).join('');
 
-      const rows = visibleSchemes.map(s => {
+      const cards = visibleSchemes.map(s => {
         const isBest = s.key === bestScheme.key;
-        const resultTag = isBest ? '<span class="tag best">当前最优</span>' : (s.key === 'C' ? '<span class="tag caution">备选</span>' : '<span class="tag neutral">可选</span>');
         const diffClass = schemeDiffClass(s.incrementalTax,bestTax);
         const diffText = schemeDiffText(s.incrementalTax,bestTax);
+
         return `
-          <tr>
-            <td class="scheme-name"><strong>${s.title}</strong><span>${s.desc}</span></td>
-            <td class="mono num">¥${formatMoney(s.incrementalTax)}</td>
-            <td class="mono num">¥${formatMoney(s.totalTax)}</td>
-            <td class="mono num">¥${formatMoney(s.afterTaxBonus)}</td>
-            <td>${resultTag}</td>
-            <td class="${diffClass}">${diffText}</td>
-            <td>${s.extra}</td>
-          </tr>`;
+          <div class="scheme-card ${isBest ? 'best' : ''}">
+            <div class="scheme-title">${s.title}</div>
+            <div class="scheme-desc">${s.desc}</div>
+
+            <div class="scheme-row">
+              <span class="scheme-label">本次奖金对应税额</span>
+              <span class="scheme-value">¥${formatMoney(s.incrementalTax)}</span>
+            </div>
+
+            <div class="scheme-row">
+              <span class="scheme-label">预计全年总税负</span>
+              <span class="scheme-value">¥${formatMoney(s.totalTax)}</span>
+            </div>
+
+            <div class="scheme-row">
+              <span class="scheme-label">预计本次奖金到手</span>
+              <span class="scheme-value">¥${formatMoney(s.afterTaxBonus)}</span>
+            </div>
+
+            <div class="scheme-row">
+              <span class="scheme-label">与最优方案差异</span>
+              <span class="scheme-value scheme-diff ${diffClass}">${diffText}</span>
+            </div>
+
+            <div class="scheme-extra">${s.extra}</div>
+          </div>`;
       }).join('');
 
       const resultHTML = `
@@ -1055,17 +1167,33 @@
             <div class="card-header"><h2>税负对比图</h2></div>
             <div class="card-body"><div class="bar-list">${bars}</div></div>
           </div>
+
           <div class="card chart-card">
             <div class="card-header"><h2>推荐方案税负仪表盘</h2></div>
             <div class="card-body">
               <div class="donut-wrap">
-                <div class="donut" style="background:conic-gradient(var(--danger) 0deg, var(--danger) ${donutDeg}deg, #E8F1FA ${donutDeg}deg, #E8F1FA 360deg);">
-                  <div class="donut-inner"><div><strong>${formatPct(effectiveRate)}</strong><span>奖金实际税率</span></div></div>
+                <div class="donut" style="background:conic-gradient(var(--danger) 0deg,var(--danger) ${donutDeg}deg,#E8F1FA ${donutDeg}deg,#E8F1FA 360deg);">
+                  <div class="donut-inner">
+                    <div>
+                      <strong>${formatPct(effectiveRate)}</strong>
+                      <span>奖金实际税率</span>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="donut-legend">
-                  <div class="legend-item"><div class="legend-left"><span class="dot"></span>两笔奖金合计</div><div class="legend-value">¥${formatMoney(totalBonus)}</div></div>
-                  <div class="legend-item"><div class="legend-left"><span class="dot tax"></span>推荐方案税额</div><div class="legend-value">¥${formatMoney(bestTax)}</div></div>
-                  <div class="legend-item"><div class="legend-left"><span class="dot net"></span>预计奖金到手</div><div class="legend-value">¥${formatMoney(bestScheme.afterTaxBonus)}</div></div>
+                  <div class="legend-item">
+                    <div class="legend-left"><span class="dot"></span>两笔奖金合计</div>
+                    <div class="legend-value">¥${formatMoney(totalBonus)}</div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-left"><span class="dot tax"></span>推荐方案税额</div>
+                    <div class="legend-value">¥${formatMoney(bestTax)}</div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-left"><span class="dot net"></span>预计奖金到手</div>
+                    <div class="legend-value">¥${formatMoney(bestScheme.afterTaxBonus)}</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1073,24 +1201,9 @@
         </div>
 
         <div class="card matrix-card">
-          <div class="card-header"><h2>方案对比矩阵</h2></div>
+          <div class="card-header"><h2>方案对比</h2></div>
           <div class="card-body">
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>方案</th>
-                    <th>本次奖金对应税额</th>
-                    <th>预计全年总税负</th>
-                    <th>预计本次奖金到手</th>
-                    <th>结果</th>
-                    <th>与最优方案差异</th>
-                    <th>说明</th>
-                  </tr>
-                </thead>
-                <tbody>${rows}</tbody>
-              </table>
-            </div>
+            <div class="scheme-cards">${cards}</div>
           </div>
         </div>
 
@@ -1102,16 +1215,44 @@
         </div>
 
         <div class="notes">
-          <div class="note"><strong>口径说明</strong><div>本工具将“全年工资收入”作为基础综合所得，将年度扣除信息，包括 60,000 元减除费用、专项扣除、专项附加扣除及其他允许扣除，一并纳入年度税负测算。</div></div>
-          <div class="note"><strong>如何理解三个方案</strong><div>方案A：年终奖按全年一次性奖金单独计税，另一笔奖金并入综合所得；方案B：两笔奖金合并后按全年一次性奖金口径测算；${showAllScenario ? '方案C：两笔奖金均并入综合所得。' : '当前未展示方案C。'}</div></div>
-          <div class="note"><strong>关键提醒</strong><div>${jumpWarning || '若合并后奖金金额跨越税档，全年一次性奖金单独计税适用税率可能变化，建议对临界金额再复核一次。'}</div></div>
-          <div class="note"><strong>当前测算摘要</strong><div>方案A奖金税额：¥${formatMoney(schemeAIncrementalTax)}；方案B奖金税额：¥${formatMoney(schemeBIncrementalTax)}${showAllScenario ? '；方案C奖金税额：¥' + formatMoney(schemeCIncrementalTax) : ''}。${bestScheme.key === 'A' ? '当前“不合并发放”更省税。' : bestScheme.key === 'B' ? '当前“合并发放”更省税。' : '当前“全部并入综合所得”更省税。'}</div></div>
-          <div class="note"><strong>测算公式</strong><ul class="formula-list"><li>全年一次性奖金单独计税：奖金 ÷ 12 确定税率，税额 = 奖金 × 税率 − 速算扣除数。</li><li>综合所得年度税额：年度应纳税所得额 × 税率 − 速算扣除数。</li><li>年度应纳税所得额 = 年度综合收入 − 60,000 − 专项扣除 − 专项附加扣除 − 其他允许扣除。</li></ul></div>
-          <div class="note"><strong>政策提示</strong><div>全年一次性奖金可选择单独计税，也可选择并入当年综合所得。同一纳税年度内通常只能使用一次全年一次性奖金单独计税口径。本工具仅用于税负趋势测算，实际以公司申报口径及年度汇算结果为准。</div></div>
+          <div class="note">
+            <strong>口径说明</strong>
+            <div>本工具将“全年工资收入”作为基础综合所得，将年度扣除信息，包括 60,000 元减除费用、专项扣除、专项附加扣除及其他允许扣除，一并纳入年度税负测算。</div>
+          </div>
+
+          <div class="note">
+            <strong>如何理解三个方案</strong>
+            <div>方案A：年终奖按全年一次性奖金单独计税，另一笔奖金并入综合所得；方案B：两笔奖金合并后按全年一次性奖金口径测算；${showAllScenario ? '方案C：两笔奖金均并入综合所得。' : '当前未展示方案C。'}</div>
+          </div>
+
+          <div class="note">
+            <strong>关键提醒</strong>
+            <div>${jumpWarning || '若合并后奖金金额跨越税档，全年一次性奖金单独计税适用税率可能变化，建议对临界金额再复核一次。'}</div>
+          </div>
+
+          <div class="note">
+            <strong>当前测算摘要</strong>
+            <div>方案A奖金税额：¥${formatMoney(schemeAIncrementalTax)}；方案B奖金税额：¥${formatMoney(schemeBIncrementalTax)}${showAllScenario ? '；方案C奖金税额：¥' + formatMoney(schemeCIncrementalTax) : ''}。${bestScheme.key === 'A' ? '当前“不合并发放”更省税。' : bestScheme.key === 'B' ? '当前“合并发放”更省税。' : '当前“全部并入综合所得”更省税。'}</div>
+          </div>
+
+          <div class="note">
+            <strong>测算公式</strong>
+            <ul class="formula-list">
+              <li>全年一次性奖金单独计税：奖金 ÷ 12 确定税率，税额 = 奖金 × 税率 − 速算扣除数。</li>
+              <li>综合所得年度税额：年度应纳税所得额 × 税率 − 速算扣除数。</li>
+              <li>年度应纳税所得额 = 年度综合收入 − 60,000 − 专项扣除 − 专项附加扣除 − 其他允许扣除。</li>
+            </ul>
+          </div>
+
+          <div class="note">
+            <strong>政策提示</strong>
+            <div>全年一次性奖金可选择单独计税，也可选择并入当年综合所得。同一纳税年度内通常只能使用一次全年一次性奖金单独计税口径。本工具仅用于税负趋势测算，实际以公司申报口径及年度汇算结果为准。</div>
+          </div>
         </div>
       `;
 
       document.getElementById('resultArea').innerHTML = resultHTML;
+      document.getElementById('resultArea').scrollIntoView({behavior:'smooth',block:'start'});
     }
   </script>
 </body>
