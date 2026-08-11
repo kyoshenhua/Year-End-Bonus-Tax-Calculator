@@ -44,7 +44,7 @@
     }
 
     .container{
-      width:min(1080px,100%);
+      width:min(1400px,100%);
       margin:0 auto;
     }
 
@@ -146,8 +146,8 @@
 
     .layout{
       display:grid;
-      grid-template-columns:390px 1fr;
-      gap:22px;
+      grid-template-columns:360px minmax(0,1fr);
+      gap:24px;
       align-items:start;
     }
 
@@ -457,7 +457,7 @@
 
     .analysis-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns:1.3fr .7fr;
       gap:16px;
       margin-bottom:16px;
     }
@@ -501,10 +501,10 @@
     }
 
     .donut-wrap{
-      display:grid;
-      grid-template-columns:160px 1fr;
-      gap:18px;
+      display:flex;
+      flex-direction:column;
       align-items:center;
+      gap:20px;
     }
 
     .donut{
@@ -543,7 +543,11 @@
       font-weight:800;
     }
 
-    .donut-legend{display:grid;gap:10px;}
+    .donut-legend{
+      width:100%;
+      display:grid;
+      gap:10px;
+    }
 
     .legend-item{
       display:flex;
@@ -555,6 +559,8 @@
       border-radius:13px;
       background:#FBFDFF;
       font-size:13px;
+      width:100%;
+      min-width:0;
     }
 
     .legend-left{
@@ -568,7 +574,12 @@
     .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);}
     .dot.tax{background:var(--danger);}
     .dot.net{background:var(--success);}
-    .legend-value{font-weight:900;font-variant-numeric:tabular-nums;color:#0F2342;}
+    .legend-value{
+      font-weight:900;
+      font-variant-numeric:tabular-nums;
+      color:#0F2342;
+      white-space:nowrap;
+    }
 
     .matrix-card{margin-bottom:16px;}
 
