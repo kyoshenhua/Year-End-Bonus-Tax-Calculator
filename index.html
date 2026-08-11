@@ -143,7 +143,25 @@
       font-size:12px;
       font-weight:700;
     }
-
+    
+    .hero-privacy{
+        margin-top:14px;
+        padding:12px 14px;
+        border-radius:12px;
+        background:rgba(15,157,88,.18);
+        border:1px solid rgba(110,231,183,.35);
+        color:#F0FFF4;
+        font-size:12px;
+        line-height:1.6;
+    }
+    
+    .hero-privacy strong{
+      display:block;
+      margin-bottom:4px;
+      color:#fff;
+      font-size:13px;
+    }
+    
     .layout{
       display:grid;
       grid-template-columns:360px minmax(0,1fr);
@@ -781,6 +799,13 @@
           <span>合并发放</span>
           <span>综合所得</span>
         </div>
+        <div class="hero-privacy">
+          <strong>🔒 数据与隐私说明</strong>
+          本工具仅用于个人税负测算参考。
+          所有计算均在本地浏览器完成，
+          不会收集、上传或保存员工输入的工资、
+          奖金及扣除信息。
+        </div>
       </div>
     </section>
 
@@ -873,13 +898,6 @@
           </div>
 
           <div class="footer-tip">说明：本工具仅供员工预估参考，实际以申报系统、公司申报口径及年度汇算结果为准。</div>
-          </div>
-        
-          <div class="privacy-note">
-            <strong>🔒 隐私说明</strong>
-            本工具仅用于个人税负测算参考。
-            所有计算均在本地浏览器完成，不会收集、上传或保存员工输入的工资、奖金及扣除信息。
-            关闭页面后数据即自动清除，请妥善保管个人薪酬信息。
           </div>
       </aside>
 
